@@ -1,16 +1,13 @@
-
-const Nouns = [
-    "alligator chaser",
+const Nounlist = [    
+    /* Animal / insect */
     "alpaca",
-    "antelope",
-    "armadillo",
-    "donkey",
+    "antelope",    
+    "armadillo",    
     "badger",
-    "bat",
-    "bear herder",
+    "bat",    
     "beaver",
     "bee",
-    "buffalo",
+    "buffalo",    
     "butterfly",
     "camel",
     "caribou",
@@ -18,10 +15,10 @@ const Nouns = [
     "cheetah",
     "chimpanzee",
     "chinchilla",
-    "coyote",
-    "daisy",
+    "coyote",    
     "deer",
     "dolphin",
+    "donkey",
     "duck",
     "elk",
     "ferret",
@@ -38,9 +35,9 @@ const Nouns = [
     "kangaroo",
     "koala",
     "land-mermaid",
-    "leopard",
+    "leopard",    
     "lion",
-    "death-defying llama",
+    "llama",
     "macaw",
     "mallard",
     "manatee",
@@ -48,29 +45,22 @@ const Nouns = [
     "mink",
     "moth",
     "muskox",
-    "newborn baby",
-    "nurse",
-    "orchid",
-    "circus otter",
+    "otter",
     "crime fighting oyster",
     "panda",
     "pig",
-    "platypus",
-    "poppy",
+    "platypus",    
     "porcupine",
     "porpoise",
     "prairie dog",
-    "super",
+    "super pig",
     "rabbit",
     "raccoon",
-    "reindeer",
-    "dew flecked rose",
-    "sacred lotus",
+    "reindeer",    
     "salmon",
     "sardine",
     "sea",
-    "seal",
-    "shakespearean actor",
+    "seal",    
     "shark",
     "space lion",
     "space unicorn",
@@ -81,19 +71,53 @@ const Nouns = [
     "sunfish",
     "sunken treasure",
     "sun goddess",
-    "swan",
+    "swan",    
     "tiger",
     "tortoise",
     "tree shark",
     "tropical fish",
     "trout detective",
-    "turtle wrangler",
-    "underwear model",
+    "turtle wrangler",    
     "wallaby",
     "wild pig",
     "wolf",
     "wombat",
-    "zebra"
+    "zebra",
+
+    /* Flower / plant */
+    "apple blossom",
+    "buttercup",
+    "daisy",
+    "lilac",
+    "lily",
+    "orchid",
+    "orange blossom",
+    "poppy",
+    "rose",
+    "sacred lotus",
+    "sweet pea",
+    "tulip",
+
+    /* Occupation / role */
+    "alligator chaser",
+    "bear herder",
+    "fixer-of-things",
+    "nerd herder",
+    "newborn baby",
+    "nurse",
+    "shakespearean actor",
+    "underwear model",
+
+    /* Space, the final frontier */
+    "supernova"    
 ];
 
-export default Nouns;
+class Nouns {
+
+    getRandomNoun() {
+        let index = Math.floor(Math.random() * (Nounlist.length)); // The maximum is inclusive and the minimum is inclusive
+        return Nounlist[index].toLowerCase();
+    }
+}
+
+export default new Nouns();

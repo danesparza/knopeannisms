@@ -10,19 +10,14 @@ class App extends Component {
   render() {
 
     //  Select a random noun:
-    let nounIndex = Math.floor(Math.random()*Nouns.length);
-    let noun = Nouns[nounIndex].toLowerCase();
+    let noun = Nouns.getRandomNoun();
 
     //  Select a random sensory adjective:
-    let senseIndex1 = Math.floor(Math.random()*Sensory.length);
-    let sensoryAdjective1 = Sensory[senseIndex1].toLowerCase();
-
-    let senseIndex2 = Math.floor(Math.random()*Sensory.length);
-    let sensoryAdjective2 = Sensory[senseIndex2].toLowerCase();
+    let sensoryAdjective1 = Sensory.getRandomAdjective();
+    let sensoryAdjective2 = Sensory.getRandomAdjective();
 
     //  Select a random personality adjective:
-    let personalityIndex = Math.floor(Math.random()*Personality.length);
-    let personalityAdjective = Personality[personalityIndex].toLowerCase();
+    let personalityAdjective = Personality.getRandomAdjective();
 
     return (
       <div className="App">

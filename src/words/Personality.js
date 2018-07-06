@@ -1,10 +1,6 @@
-
-const Sensory = [
-    "Adaptable",
+const PersonalityList = [
     "Adventurous",
-    "Affable",
     "Affectionate",
-    "Agreeable",
     "Ambitious",
     "Amiable",
     "Amusing",
@@ -99,8 +95,18 @@ const Sensory = [
     "Versatile",
     "Vivacious",
     "Warmhearted",
+    "Wicked",
     "Willing",
     "Witty"
 ];
 
-export default Sensory;
+class Personality {
+
+    getRandomAdjective() {
+        let index = Math.floor(Math.random() * (PersonalityList.length)); // The maximum is inclusive and the minimum is inclusive
+        return PersonalityList[index].toLowerCase();
+    }
+
+}
+
+export default new Personality();
