@@ -20,6 +20,7 @@ const Sensorylist = [
     "Perfumed",
 
     /* Sight */
+    "Beautiful",
     "Brawny",
     "Briny",
     "Clean",
