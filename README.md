@@ -1,4 +1,4 @@
-# knopeannisms
+# knopeannisms [![CircleCI](https://circleci.com/gh/danesparza/knopeannisms.svg?style=shield)](https://circleci.com/gh/danesparza/knopeannisms)
 Compliment generator.  Similar to Leslie Knope compliments for Ann
 
 ![Leslie Knope compliments](compliments.gif?raw=true)
