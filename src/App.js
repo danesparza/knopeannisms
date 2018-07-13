@@ -7,28 +7,40 @@ import Sensory from './words/Sensory';
 import Nouns from './words/Nouns';
 
 class App extends Component {
-  render() {
+  constructor(props) {
+    super(props);
 
-    //  Select a random noun:
-    let noun = Nouns.getRandomNoun();
+    this.state = {
+      noun: Nouns.getRandomNoun(),
+      sensoryAdjective1: Sensory.getRandomAdjective(),
+      sensoryAdjective2: Sensory.getRandomAdjective(),
+      personalityAdjective: Personality.getRandomAdjective()  
+    };    
+}
 
-    //  Select a random sensory adjective:
-    let sensoryAdjective1 = Sensory.getRandomAdjective();
-    let sensoryAdjective2 = Sensory.getRandomAdjective();
-
-    //  Select a random personality adjective:
-    let personalityAdjective = Personality.getRandomAdjective();
+  render() {   
 
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">You {sensoryAdjective1}, {personalityAdjective} and {sensoryAdjective2} {noun}</h1>
+          <h1 className="App-title">You {this.state.sensoryAdjective1}, {this.state.personalityAdjective} and {this.state.sensoryAdjective2} {this.state.noun}</h1>
+
+          <button onClick={this.refresh}>Another, please!</button>
         </header>
         <p className="App-intro">
           Compliments like Leslie Knope to Ann Perkins
         </p>
       </div>
     );
+  }
+
+  refresh = () => {
+    this.setState({
+      noun: Nouns.getRandomNoun(),
+      sensoryAdjective1: Sensory.getRandomAdjective(),
+      sensoryAdjective2: Sensory.getRandomAdjective(),
+      personalityAdjective: Personality.getRandomAdjective()  
+    });
   }
 }
 
