@@ -56,7 +56,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/python:3.4-jessie-browsers
+      - image: cimg/python:3.9.6
     steps:
       - attach_workspace:
           at: /tmp/workspace
