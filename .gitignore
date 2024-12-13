@@ -59,6 +59,3 @@ typings/
 
 # next.js build output
 .next
-
-# Any local builds should get ignored
-build/
